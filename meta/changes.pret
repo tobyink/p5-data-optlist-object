@@ -19,3 +19,9 @@
 	changeset [
 		item "Fixed changelog."^^Packaging;
 	].
+
+`Data-OptList-Object 0.001003 cpan:TOBYINK`
+	issued  2025-11-29;
+	changeset [
+		item "Require newer List::Util."^^Packaging;
+	].
