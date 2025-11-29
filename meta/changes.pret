@@ -10,4 +10,5 @@
 	changeset [
 		item "Remembered to list dependencies in metadata.";
 		item "Fixed changelog dates.";
+		item "Give the helper packages $VERSION, etc.";
 	].
