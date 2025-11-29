@@ -29,6 +29,8 @@ use overload (
 
 {
 	package Data::OptList::Object::_Pair;
+	our $AUTHORITY = 'cpan:TOBYINK';
+	our $VERSION   = '0.001001';
 	use overload (
 		q{bool}   => 'exists',
 		q{""}     => 'key',
@@ -43,6 +45,8 @@ use overload (
 
 {
 	package Data::OptList::Object::_NoValue;
+	our $AUTHORITY = 'cpan:TOBYINK';
+	our $VERSION   = '0.001001';
 	our @ISA = 'Data::OptList::Object::_Pair';
 	sub key     { defined $_[0][0] ? $_[0][0] : '' }
 	sub value   { undef; }
