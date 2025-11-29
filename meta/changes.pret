@@ -1,6 +1,13 @@
 # This file acts as the project's changelog.
 
 `Data-OptList-Object 0.001000 cpan:TOBYINK`
-	issued  2025-11-28;
+	issued  2025-11-29;
 	label   "Initial release".
 
+`Data-OptList-Object 0.001001 cpan:TOBYINK`
+	issued  2025-11-29;
+	label   "Oops";
+	changeset [
+		item "Remembered to list dependencies in metadata.";
+		item "Fixed changelog dates.";
+	].

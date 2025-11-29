@@ -5,7 +5,7 @@ use warnings;
 package Data::OptList::Object;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001000';
+our $VERSION   = '0.001001';
 
 use Exporter::Tiny qw( mkopt );
 use List::Util 1.39 qw( first any uniqstr );
