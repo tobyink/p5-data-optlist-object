@@ -4,7 +4,7 @@
 
 =head1 PURPOSE
 
-Print version numbers, etc.
+Simple integration tests for L<Data::OptList::Object>.
 
 =head1 AUTHOR
 
@@ -17,30 +17,14 @@ This software is copyright (c) 2025 by Toby Inkster.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-
 =cut
 
-use Test2::V0;
+use Test2::V0 -target => 'Data::OptList::Object';
+use Data::Dumper;
 
-my @modules = qw(
-	Exporter::Tiny
-	List::Util
-	Scalar::Util
-	constant
-	overload
-	re
-	namespace::autoclean
-	Test2::V0
-);
-
-diag "\n####";
-for my $mod ( sort @modules ) {
-	eval "require $mod;";
-	diag sprintf( '%-20s %s', $mod, $mod->VERSION );
-}
-diag "####";
-
-pass;
+my $o = $CLASS->new( qw/ foo bar baz/, quux => undef, quuux => [] );
+ok $o->quux->exists;
+ok !$o->not_exists->exists;
+is $o->quuux->value, [];
 
 done_testing;
-
