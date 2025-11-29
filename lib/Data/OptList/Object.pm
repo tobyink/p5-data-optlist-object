@@ -5,7 +5,7 @@ use warnings;
 package Data::OptList::Object;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.001001';
+our $VERSION   = '0.001002';
 
 use Exporter::Tiny qw( mkopt );
 use List::Util 1.39 qw( first any uniqstr );
@@ -30,7 +30,7 @@ use overload (
 {
 	package Data::OptList::Object::_Pair;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.001001';
+	our $VERSION   = '0.001002';
 	use overload (
 		q{bool}   => 'exists',
 		q{""}     => 'key',
@@ -46,7 +46,7 @@ use overload (
 {
 	package Data::OptList::Object::_NoValue;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.001001';
+	our $VERSION   = '0.001002';
 	our @ISA = 'Data::OptList::Object::_Pair';
 	sub key     { defined $_[0][0] ? $_[0][0] : '' }
 	sub value   { undef; }

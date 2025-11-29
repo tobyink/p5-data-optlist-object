@@ -8,7 +8,14 @@
 	issued  2025-11-29;
 	label   "Oops";
 	changeset [
-		item "Remembered to list dependencies in metadata.";
-		item "Fixed changelog dates.";
-		item "Give the helper packages $VERSION, etc.";
+		item "Remembered to list dependencies in metadata."^^Packaging;
+		item "Fixed changelog dates."^^Packaging;
+		item "Give the helper packages $VERSION, etc."^^Change;
+	].
+
+`Data-OptList-Object 0.001002 cpan:TOBYINK`
+	issued  2025-11-29;
+	label   "Oops, I did it again";
+	changeset [
+		item "Fixed changelog."^^Packaging;
 	].
